@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<MyObject> myObjectList;
     private ArrayList<String> tasksList;
     private ArrayList<String> descriptionList;
+    private ArrayList<String> urlImageList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +39,21 @@ public class MainActivity extends AppCompatActivity {
 
         myObjectList = new ArrayList<>();
         tasksList = new ArrayList<>();
-        Collections.addAll(tasksList, "Mathe Hausaufgaben", "Physik Hausaufgaben", "Geschi-Referat", "Deutsch Lernen", "Englisch Text schreiben", "Deutsch Hausaufgaben");
+        Collections.addAll(tasksList, "Arizona, USA", "Bolivia", "Russia", "Luang Prabang, Laos", "Wyoming, USA", "Peru");
         descriptionList = new ArrayList<>();
-        Collections.addAll(descriptionList, "Seite 344", "Seite 144/145", "WK2","Die Verwandlung", "Evolution", "Gregor charakterisieren");
+        Collections.addAll(descriptionList, "Antelope Canyon", "Salar de Uyuni", "Northern Lake Baikal", "Kuang Si Falls", "Grand Prismatic Spring", "Huacachina");
+        urlImageList = new ArrayList<>();
+        Collections.addAll(urlImageList, "https://content.skyscnr.com/2e49ce40b8541cf1ce13721676454e2a/GettyImages-486114691.jpg?resize=800px:99999px&quality=75"
+        ,"https://content.skyscnr.com/e39998f504f924a7cb3dd64b5562bf62/GettyImages-484022402.jpg?resize=800px:99999px&quality=75"
+                ,"https://content.skyscnr.com/895a30d6e9ed1778aab140f6ba56692f/GettyImages-478393436.jpg?resize=800px:99999px&quality=75"
+                ,"https://content.skyscnr.com/09e159a7949caa55ffcc3183a15ab10a/GettyImages-533310705.jpg?resize=800px:99999px&quality=75"
+                , "https://content.skyscnr.com/3b45a8035ff4819132314a4916c1e4fd/GettyImages-186133502.jpg?resize=800px:99999px&quality=75"
+                ,"https://content.skyscnr.com/109a073b7c038e37b3f5c4990541ba2e/GettyImages-523790235.jpg?resize=800px:99999px&quality=75");
 
         //fill my object list with example data
         for(int i = 0; i < tasksList.size(); i++)
         {
-            MyObject myObj = new MyObject(tasksList.get(i), descriptionList.get(i), "23.06.17");
+            MyObject myObj = new MyObject(tasksList.get(i), descriptionList.get(i), urlImageList.get(i));
             myObjectList.add(myObj);
         }
 
