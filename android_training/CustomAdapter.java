@@ -58,7 +58,18 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             ((NormaleViewHolder)holder).taskText.setText(dataList.get(position-1).getTask());
             ((NormaleViewHolder)holder).descriptionText.setText(dataList.get(position-1).getDescription());
             ((NormaleViewHolder)holder).dateText.setText(dataList.get(position-1).getDate());
+           
+           
+           
+           //here you set up your onCLickListeners and all that stuff
+           
+           
+           
         }
+       
+       
+       
+       
     }
 
     @Override
